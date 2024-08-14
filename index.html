@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="html.css">
+</head>
+<body>
+  <table>
+ 
+    
+    <nav>
+      <ul id="nav">
+        
+        <li >Tela inicial</li>
+        <li id="drop-list"> Opções
+            <ul id="dropdown">
+             <li>Cadastre-se aqui</li>
+              <li>Pedidos</li>
+              <li></li>
+              <li></li>        
+            </ul>
+        </li>        
+    <li id="drop-click">Cardapio
+      <input type='checkbox' id='check'>
+      <ul id="dropdown-click">
+      
+      
+  </ul>
+</li>
+<li id="drop-click">Contato
+  <input type='checkbox' id='check'>
+  <ul id="dropdown-click">
+  <li>Instagram</li>
+  <li>Email</li>
+  <li>Whatsapp</li>
+  
+</ul>
+</li>
+<li id="drop-click">Quem somos
+  <input type='checkbox' id='check'>
+  <ul id="dropdown-click">
+  
+</ul>
+</li>        
+      </ul>
+      </nav>
+      <div class="barra-pesquisa">
+        <form action="/search">
+            <input type="text" placeholder="Pesquisar..." name="search">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+      
+      <main>
+        <b id="logo"></b><br>
+      <hr color="#fccf00"> 
+        <div id="image-container">
+              <img src="Burguer do Rei.png" alt="Description">
+          </div>
+      <hr color="#fccf00">
+       
+     
+        <div class="form">
+            <h2>Cadastro</h2>
+            <form action="/submit" method="POST">
+                <div class="formulario">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="formulario">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="formulario">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <div class="formulario">
+                    <label for="confirma-senha">Confirme a Senha</label>
+                    <input type="password" id="confirma-senha" name="confirma-senha" required>
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+       
+        <header id="Cardapio">
+          
+        </header>
+        
+        <section class="menu">
+          <h2>Cardápio</h2>
+          <div class="item">
+              <h3>Rei Kids</h3>
+              <p>Pão, carne, queijo, alface, tomate e molho especial</p>
+              <p><strong>R$ 28,00</strong></p>
+          </div>
+          <div class="item">
+              <h3>Rei Bacon</h3>
+              <p>Pão de hambúrguer com gergelim, molho rei, hambúrguer bovino, bacon, queijo, cebola, alface e tomate</p>
+              <p><strong>R$ 32,90</strong></p>
+          </div>
+          <div class="item">
+              <h3>Rei Vegetariano</h3>
+              <p>Pão hambúrguer com gergelim, burguer do futuro (100% de plantas e vegetais), queijo do reino, tomate e cebola</p>
+              <p><strong>R$ 35,90</strong></p>
+          </div>
+          <div class="item">
+              <h3>Rei Cheddar</h3>
+              <p>Pão australiano, hambúrguer bovino, bacon, cheddar cremoso, cebola, tomate e molho da casa.</p>
+              <p><strong>R$ 34,90</strong></p>
+          </div>
+          <div class="item">
+              <h3>Rei Picanha</h3>
+              <p>Pão de hambúrguer com gergelim, molho rei, hambúrguer de picanha, queijo, bacon, champignon, chimichurri, alface e tomate</p>
+              <p><strong>R$ 40,00</strong></p>
+          </div>
+          <div class="item">
+              <h3>Rei Frango</h3>
+              <p>Pão de hambúrguer com gergelim, molho coreu, hambúrguer de frango (filé de frango moído com bacon), catupiry, tomate, picles</p>
+              <p><strong>R$ 33,50</strong></p>
+          </div>
+          <div class="item">
+              <h3>Rei Duplo</h3>
+              <p>Pão de hambúrguer com gergelim, molho rei, dois hambúrgueres bovino, dobro de bacon, dobro de queijo, ovo, picles, cebola, alface e tomate</p>
+              <p><strong>R$ 45,00</strong></p>
+          </div>
+         
+
+
+
+        </section>
+        
+        <section class="pedido">
+          <h2>Faça seu Pedido</h2>
+          <form action="enviar_pedido.php" method="post">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required>
+        
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+        
+              <label for="hamburguer">Escolha o seu hambúrguer:</label>
+              <select id="hamburguer" name="hamburguer" required>
+                  <option value="veggie-burger"></option>
+                  <option value="rei-kids">Rei Kids</option>
+                  <option value="rei-bacon">Rei Bacon</option>
+                  <option value="rei-vegetariano">Rei Vegetariano</option>
+                  <option value="rei-cheddar">Rei Cheddar</option>
+                  <option value="rei-picanha">Rei Picanha</option>
+                  <option value="rei-frango">Rei Frango</option>
+                  <option value="rei-duplo">Rei Duplo</option>
+              </select>
+        
+              <label for="quantidade">Quantidade:</label>
+              <input type="number" id="quantidade" name="quantidade" min="1" max="10" required>
+        
+              
+        
+              <button type="submit">Enviar Pedido</button>
+          </form>
+        </section>
+        
+        <footer>
+          <p>&copy; 2024 Hamburgueria do Rei. Todos os direitos reservados.</p>
+        </footer>
+        
+    
+        
+
+        <header>
+          <h1 id="letra-preta">Quem Somos e Contato</h1>
+        
+      </header>
+      <main>
+          <section id="sobre">
+              <h2>Sobre Nós</h2>
+              <p> <br>Bem-vindo à Hamburgueria do Rei! <br>
+                  Somos mais do que apenas uma hamburgueria de delivery - somos uma paixão pela culinária, uma devoção ao sabor e um compromisso inabalável com a qualidade. Fundada com a missão de oferecer aos nossos clientes uma experiência gastronômica inigualável, aqui na Hamburgueria do rei, acreditamos que cada hambúrguer que servimos conta uma história de dedicação e cuidado.Na Hamburgueria do Rei , acreditamos que a comida não é apenas uma necessidade, mas uma forma de arte. É por isso que nos esforçamos para oferecer não apenas hambúrgueres, mas sim uma experiência culinária que desperte os sentidos e deixe uma memória duradoura em cada cliente que atendemos. Junte-se a nós nesta jornada gastronômica e descubra por que somos mais do que uma simples hamburgueria de delivery - somos uma paixão pela gastronomia, manifestada em cada hambúrguer que servimos.
+                  Seja bem-vindo à Hamburgueria do Rei - onde o sabor encontra a excelência.</p>
+          </section>
+          
+       
+          <section id="contato">
+              <h2>Contato</h2>
+              <p>Você pode nos encontrar pelo e-mail <a href="mailto:contato@exemplo.com">Email: hamburgueriarei@gmail.com</a> ou através das nossas redes sociais.</p>
+              <p>WhatsApp: (31) 96977-7697 </p>
+              <p>Instagram: @hamburgueria_do_rei</p>
+          </section>
+      </main>
+      <footer>
+          <p>&copy; 2024 Nossa Empresa. Todos os direitos reservados.</p>
+      </footer>
+</main> 
+ 
+
+
+       
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+</body>
+</html>
